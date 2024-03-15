@@ -17,13 +17,15 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 12
+        node-version: 20
     - name: Install MTA Build Tool
       run: npm install -g mbt
     # Do not generate package-lock.json
     # See https://blogs.sap.com/2020/07/07/escaping-eintegrity-hell/
     - name:   Install Packages ci
       run:    npm install ci
+    - name:   Install Packages cds
+      run:    npm install @sap/cds
     - name:   Building cds
       run:   cds build
     #- name: Disable package-lock.json
