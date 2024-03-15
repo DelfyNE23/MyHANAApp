@@ -26,8 +26,8 @@ jobs:
       run:    npm install ci
     - name:   Install Packages cds
       run:    npm install @sap/cds
-    - name:   Building cds
-      run:   cds build
+    #- name:   Building cds
+    #  run:   cds build
     #- name: Disable package-lock.json
     #  run: npm config set package-lock true
     - name: Build MTA
