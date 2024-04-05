@@ -1,5 +1,5 @@
 {
-  
+  "welcomeFile": "app/interactions_items/webapp/index.html",
   "authenticationMethod": "route",
   "logout": {
     "logoutEndpoint": "/app-logout",
