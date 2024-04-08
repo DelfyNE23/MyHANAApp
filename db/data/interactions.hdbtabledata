@@ -1,0 +1,84 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "Interactions_Header",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Interactions_Header.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ";"
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                    "ID",
+                    "PARTNER",
+                    "LOG_DATE",
+                    "BPCOUNTRY_CODE"                    
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+                "ID": 1,
+                "PARTNER": 2,
+                "LOG_DATE": 3,
+                "BPCOUNTRY_CODE": 4
+            }
+        },
+        {
+            "target_table": "Interactions_Items",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "Interactions_Items.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ";"
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                    "TEXT_ID",
+                    "LANGU",
+                    "LOGTEXT",
+                    "INTHEADER_ID"
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+                "TEXT_ID": 1,
+                "LANGU": 2,
+                "LOGTEXT": 3,
+                "INTHEADER_ID": 4
+            }
+        },
+        {
+            "target_table": "sap_common_Countries",
+            "source_data": {
+                "data_type": "CSV",
+                "file_name": "sap_common_Countries.csv",
+                "has_header": true,
+                "dialect": "HANA",
+                "type_config": {
+                    "delimiter": ";"
+                }
+            },
+            "import_settings": {
+                "import_columns": [
+                    "name,
+                    "descr",
+                    "code"                    
+                ],
+                "include_filter": []
+            },
+            "column_mappings": {
+                "name": 1,
+                "descr": 2,
+                "code": 3,
+            }
+        },
+    ]
+}
