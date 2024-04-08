@@ -8,6 +8,7 @@ build-parameters:
   before-all:
     - builder: custom
       commands:
+        - npm ci    #(clean- install) necesario para el build de cicd job
         - npx cds build --production
 modules:
   - name: MyHANAApp-srv  #service module of type Node.js
