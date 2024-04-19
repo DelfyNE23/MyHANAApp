@@ -22,13 +22,10 @@ jobs:
     # Do not generate package-lock.json
     # See https://blogs.sap.com/2020/07/07/escaping-eintegrity-hell/
     - name:   Install Packages ci
-      run:    npm install ci
+      run:    npm ci
     - name:   Install Packages cds
       run:    npm install @sap/cds
-    #- name:   Building cds
-    #  run:   cds build
-    #- name: Disable package-lock.json
-    #  run: npm config set package-lock true
+    
     - name: Build MTA
       run: mbt build -p cf
     - name: Upload Artifact
